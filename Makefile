@@ -29,10 +29,6 @@ define Package/redsocks-dev
   TITLE:=Redirect any TCP connection to a SOCKS or HTTPS proxy server
 endef
 
-define Package/redsocks-dev/conffiles
-/etc/config/redsocks
-endef
-
 define Package/redsocks-dev/description
  Redsocks is a daemon running on the local system, that will transparently
  tunnel any TCP connection via a remote SOCKS4, SOCKS5 or HTTP proxy server. It
@@ -50,15 +46,9 @@ endef
 define Package/redsocks-dev/install
 	$(INSTALL_DIR) $(1)/usr/sbin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/redsocks $(1)/usr/sbin/
-	$(INSTALL_DIR) $(1)/etc/init.d/
-	$(INSTALL_BIN) files/redsocks.init $(1)/etc/init.d/redsocks
+	$(INSTALL_DIR) $(1)/etc/
 	$(INSTALL_DATA) files/redsocks.conf.template $(1)/etc/
-	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_CONF) ./files/redsocks.config $(1)/etc/config/redsocks
-	$(INSTALL_DIR) $(1)/etc/uci-defaults/
-	$(INSTALL_DATA) files/redsocks.uci-default $(1)/etc/uci-defaults/97-redsocks
-	$(INSTALL_DIR) $(1)//usr/share/redsocks/
-	$(INSTALL_DATA) files/firewall.include $(1)/usr/share/redsocks/firewall.include
+		
 
 endef
 
