@@ -19,6 +19,9 @@ RedSocks for OpenWrt
    cd OpenWrt-SDK-ar71xx-*
    # 获取 Makefile
    git clone https://github.com/caonimac/redsocks-openwrt.git package/redsocks
+   # 安装依赖包源码
+   ./scripts/feeds update base
+   ./scripts/feeds install libevent2
    # 选择要编译的包 Network -> redsocks
    make menuconfig
    # 开始编译
