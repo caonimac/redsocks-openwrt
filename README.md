@@ -25,8 +25,10 @@ RedSocks for OpenWrt
    make package/redsocks-dev/compile V=9
    # 修改redsocks.conf
    vi /etc/redsocks.conf
-   # 运行
+   # 运行
    redsocks -c /etc/redsocks.conf
+   
+   
    ```
 
 
