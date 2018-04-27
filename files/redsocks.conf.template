@@ -1,16 +1,25 @@
 base {
-	log_debug = off;
-	log_info = on;
-	log = "file:/dev/null";
-	daemon = off;
-	redirector = iptables;
+  log_debug = off;
+  log_info = off;
+  daemon = on; 
+  redirector = iptables;
+  rlimit_nofile = 51200;
 }
 
 redsocks {
-	local_ip = 0.0.0.0;
-	local_port = |LOCAL_PORT|;
-	ip = |PROXY_IP|;
-	port = |PROXY_PORT|;
-	type = |PROXY_TYPE|;
+  local_ip = 0.0.0.0;
+  local_port = 12345;
+  ip = 127.0.0.1;
+  port = 1080;
+  type = socks5;
 }
+
+redudp {
+  local_ip = 0.0.0.0;
+  local_port = 12346;
+  ip = 127.0.0.1;
+  port = 1080;
+  udp_timeout = 30;
+}
+
 
