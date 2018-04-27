@@ -4,7 +4,7 @@ RedSocks for OpenWrt
 简介
 ---
 
- 本项目是 [RedSocks][1] 在 OpenWrt 上的移植  
+ <p>本项目是 <a href="https://github.com/darkk/redsocks">RedSocks</a> 在 OpenWrt 上的移植<br>  
  当前版本: 0.5
   
 
