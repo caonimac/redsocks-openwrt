@@ -18,8 +18,8 @@ RedSocks for OpenWrt
    tar xjf OpenWrt-SDK-ar71xx-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2
    cd OpenWrt-SDK-ar71xx-*
    # 获取 Makefile
-   git clone https://github.com/caonimac/redsocks-openwrt.git package/redsocks-dev
-   # 选择要编译的包 Network -> redsocks-dev
+   git clone https://github.com/caonimac/redsocks-openwrt.git package/redsocks
+   # 选择要编译的包 Network -> redsocks
    make menuconfig
    # 开始编译
    make package/redsocks-dev/compile V=9
