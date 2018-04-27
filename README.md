@@ -32,5 +32,5 @@ RedSocks for OpenWrt
    ```
 
 
-<a href="https://github.com/darkk/redsocks">https://github.com/darkk/redsocks</a>
-<a href="https://github.com/tominescu/redsocks-openwrt">https://github.com/tominescu/redsocks-openwrt</a>
+  <p><a href="https://github.com/darkk/redsocks">https://github.com/darkk/redsocks</a><br>
+  <p><a href="https://github.com/tominescu/redsocks-openwrt">https://github.com/tominescu/redsocks-openwrt</a><br>
