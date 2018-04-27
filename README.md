@@ -22,7 +22,7 @@ RedSocks for OpenWrt
    # 选择要编译的包 Network -> redsocks
    make menuconfig
    # 开始编译
-   make package/redsocks/compile V=9
+   make package/redsocks/compile V=99
    # 修改redsocks.conf
    vi /etc/redsocks.conf
    # 运行
