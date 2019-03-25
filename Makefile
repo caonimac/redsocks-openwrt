@@ -46,6 +46,8 @@ endef
 define Package/redsocks/install
 	$(INSTALL_DIR) $(1)/usr/sbin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/redsocks $(1)/usr/sbin/
+	$(INSTALL_DIR) $(1)/etc/init.d/
+	$(INSTALL_BIN) files/redsocks.init $(1)/etc/init.d/redsocks
 	$(INSTALL_DIR) $(1)/etc/
 	$(INSTALL_DATA) files/redsocks.conf.template $(1)/etc/redsocks.conf
 		
