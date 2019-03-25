@@ -7,7 +7,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=redsocks
+PKG_NAME:=redsocks-cao
 PKG_VERSION:=0.5-20161228
 PKG_RELEASE:=1
 
@@ -22,14 +22,14 @@ PKG_LICENSE:=Apache-2.0
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/redsocks
+define Package/redsocks-cao
   SECTION:=net
   CATEGORY:=Network
   DEPENDS:=+libevent2 +libevent2-core +libevent2-extra
   TITLE:=Redirect any TCP connection to a SOCKS or HTTPS proxy server
 endef
 
-define Package/redsocks/description
+define Package/redsocks-cao/description
  Redsocks is a daemon running on the local system, that will transparently
  tunnel any TCP connection via a remote SOCKS4, SOCKS5 or HTTP proxy server. It
  uses the system firewall's redirection facility to intercept TCP connections,
@@ -43,7 +43,7 @@ define Package/redsocks/description
  set for any UDP query, forcing the resolver to use TCP.
 endef
 
-define Package/redsocks/install
+define Package/redsocks-cao/install
 	$(INSTALL_DIR) $(1)/usr/sbin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/redsocks $(1)/usr/sbin/
 	$(INSTALL_DIR) $(1)/etc/init.d/
@@ -54,4 +54,4 @@ define Package/redsocks/install
 
 endef
 
-$(eval $(call BuildPackage,redsocks))
+$(eval $(call BuildPackage,redsocks-cao))
