@@ -13,5 +13,5 @@ start() {
 }
 
 stop() {
-  service_stop killall $ROOT/redsocks
+  killall redsocks
 }
