@@ -15,3 +15,9 @@ start() {
 stop() {
   killall redsocks
 }
+
+restart() {
+  stoo
+  sleep 2
+  start
+}
