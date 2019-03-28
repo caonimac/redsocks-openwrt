@@ -13,7 +13,7 @@ RedSocks for OpenWrt
 
  - 从 OpenWrt 的 [SDK][S] 编译  
 
-   ```bash
+  
    # 以 ar71xx 平台为例
    tar xjf OpenWrt-SDK-ar71xx-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2
    cd OpenWrt-SDK-ar71xx-*
@@ -26,13 +26,11 @@ RedSocks for OpenWrt
    make menuconfig
    # 开始编译
    make package/redsocks/compile V=99
-   # 修改redsocks.conf
-   vi /etc/redsocks.conf
    # 运行
-   redsocks -c /etc/redsocks.conf
+   service redsocks start
    
    
-   ```
+  
 
 
   
